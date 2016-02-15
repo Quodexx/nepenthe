@@ -1,0 +1,156 @@
+// Write a program that scores a blackjack hand. In blackjack,
+// a player receives from two to five cards. The cards 2 through
+// 10 are scored as 2 through 10 points each. The face cards—jack,
+// queen, and king—are scored as 10 points. The goal is to come
+// as close to a score of 21 as possible without going over 21.
+// Hence, any score over 21 is called “busted.” The ace can
+// count as either 1 or 11, whichever is better for the user. For
+// example, an ace and a 10 can be scored as either 11 or 21. Since
+// 21 is a better score, this hand is scored as 21. An ace and two
+// 8s can be scored as either 17 or 27. Since 27 is a “busted” score,
+// this hand is scored as 17.The user is asked how many cards she or he has, and the user responds with
+// one of the integers 2, 3, 4, or 5. The user is then asked for the card values. Card
+// values are 2 through 10, jack, queen, king, and ace. A good way to handle
+// input is to use the type char so that the card input 2, for example, is read as the
+// character '2', rather than as the number 2. Input the values 2 through 9 as the
+// characters '2' through '9'. Input the values 10, jack, queen, king, and ace as
+// the characters 't', 'j', 'q', 'k', and 'a'. (Of course, the user does not type in
+// the single quotes.) Be sure to allow upper- as well as lowercase letters as input.
+// After reading in the values, the program should convert them from character
+// values to numeric card scores, taking special care for aces. The output is
+// either a number between 2 and 21 (inclusive) or the word Busted. You are
+// likely to have one or more long multiway branches that use a switch statement
+// or nested if-else statement. Your program should include a loop that
+// lets the user repeat this calculation until the user says she or he is done.
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int cards_in_hand = 0;
+    char cont = 'y';
+    int value=0, total_value = 0; // score of hand
+    char card_value = 'r';
+    int n;
+
+    cout << "Score your blackjack hand. ";
+    while (cont == 'y' || cont == 'Y')
+        {
+        cout << "How many cards in your hand? ";
+        cin >> cards_in_hand;
+        if (cards_in_hand < 2 || cards_in_hand > 5)
+          {
+          cout << "Error! Your hand must be 2-5 cards, try again! " << endl;
+          cout << "How many cards in your hand?";
+          cin >> cards_in_hand;
+          }
+        else
+           /* continue */
+
+        {
+        for (n=1; n<=cards_in_hand; n++)
+          {
+            cout << "What is the value of your card?\n";
+            cout << "enter the value of card " << n << ". for card 2 - 9 enter 2 - 9\n"
+                 << " and for 10, jack, queen and king enter t, j, q, k\n"
+                 << " If you have an ace enter it as your last card as an a ";
+            cin >> card_value;
+            switch (card_value)
+             {
+             case'2':
+               value = 2;
+               cout << "The value of card " << n << "is " << value << endl;              total_value = value + total_value;
+               break;
+             case '3':
+               value = 3;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case '4':
+               value = 4;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case '5':
+               value = 5;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case '6':
+               value = 6;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case '7':
+               value = 7;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case '8':
+               value = 8;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case '9':
+               value = 9;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case 't':
+             case 'T':
+               value = 10;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case 'j':
+             case 'J':
+               value = 10;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case 'q':
+             case 'Q':
+               value = 10;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case 'k':
+             case 'K':
+               value = 10;
+               cout << "The value of card " << n << "is " << value << endl;
+               total_value = value + total_value;
+               break;
+             case 'a':
+             case 'A':
+               if (total_value <= 10)
+               {
+               value = 11;
+               }
+               else
+               {
+               value = 1;
+               }
+             cout << "Taking " << value << " points for the ace." << endl;
+             total_value = value + total_value;
+             n++;
+             }
+            if (total_value <= 21)
+             {
+             cout << "The score of your hand is: " << total_value << endl;
+             }
+             else
+             cout << "Your hand is a bust, sorry.\n";
+
+        }
+
+
+    cout << "Enter y or Y to continue: \n";
+    cin >> cont;
+    }
+    return 0;
+    }
+}
+

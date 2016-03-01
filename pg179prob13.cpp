@@ -20,24 +20,33 @@ using namespace std;
 
 int main()
 {
-    int thousands = 0;
-    int hundreds = 0;
-    int tens = 0;
-    int ones = 0;
-    //int digit;
+    int thousands;
+    int hundreds;
+    int tens;
+    int ones;
 
     cout << "Figure out the address" << endl;
-    for (thousands = 0; thousands <=9; ++thousands){
-        for (hundreds = 0; hundreds <=9; ++hundreds){
-            for (tens = 0; tens <=9; ++tens){
-                for (ones = 0; ones <=9; ones +=2){
-                    if (hundreds/3 == tens)
-                        if(thousands+hundreds+tens+ones==27)
-                            if((thousands!=hundreds)&&(hundreds!=tens)&&(tens!=ones)&&(hundreds!=ones))
-                            {
-                                cout << "The Address is " << thousands << hundreds << tens << ones << " Pennsylvania Avenue.\n";
+    for (thousands = 0; thousands <=9; thousands++){
+        cout << thousands; // why does this one not work?
+        for (hundreds = 0; hundreds <=9; hundreds++){
+            cout << hundreds;
+            for (tens = 0; tens <=9; tens+){
+                cout << tens;
+                for (ones = 0; ones <=9; ones++){
+                    cout << ones;
+                    //for (ones = 0; ones <=9; ones +=2){
+                    if(thousands+hundreds+tens+ones==27) // this works
+                        if (ones !% = 0){ // this does not work
+                            ++ones;
+                        }
+                        else
+                            if((thousands!=hundreds)&&(hundreds!=tens)&&(tens!=ones)&&(hundreds!=ones))// this works
+                                if (thousands==(3*tens))
 
-                            }
+                                {
+                                    cout << "The address is " << thousands << hundreds << tens << ones << " Pennsylvania Avenue.\n";
+
+                                }
                 }
             }
         }

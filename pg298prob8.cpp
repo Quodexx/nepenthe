@@ -1,17 +1,17 @@
-//The program asks the user if he or she wants to convert lengths or
-//weights. If the user chooses lengths, then the program asks the user if he
+//The program asks the user if he or she wants to convert
+// 1.lengths If the user chooses lengths, then the program asks the user if he
 //or she wants to convert from feet and inches to meters and centimeters
-//or from meters and centimeters to feet and inches. If the user chooses
-//weights, a similar question about pounds, ounces, kilograms, and grams
-//is asked. The program then performs the desired conversion. Have the
+//or from meters and centimeters to feet and inches.
+// 2. or  weights.  If the user chooses
+//weights, the program asks the user if they want to covert pounds, 
+// ounces, to kilograms, and grams
+//The program then performs the desired conversion. Have the
 //user respond by typing the integer 1 for one type of conversion and 2
 //for the other. The program reads the user’s answer and then executes an
 //if-else statement. Each branch of the if-else statement will be a function
 //call. The two functions called in the if-else statement will have function
-//definitions that are very similar to the programs for Practice Programs 4
-//and 7. Thus, these functions will be function definitions that call other
-//functions in their function bodies; however, they will be very easy to write
-//by adapting the programs you wrote for Practice Programs 4 and 7.
+//definitions.
+
 
 #include <iostream>
 #include <string>

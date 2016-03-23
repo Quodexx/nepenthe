@@ -1,10 +1,10 @@
 //The program asks the user if he or she wants to convert
 // 1.lengths If the user chooses lengths, then the program asks the user if he
-//or she wants to convert from feet and inches to meters and centimeters
-//or from meters and centimeters to feet and inches.
+//      or she wants to convert from feet and inches to meters and centimeters
+//      or from meters and centimeters to feet and inches.
 // 2. or  weights.  If the user chooses
-//weights, the program asks the user if they want to covert pounds, 
-// ounces, to kilograms, and grams
+//      weights, the program asks the user if they want to covert pounds, 
+//      ounces, to kilograms, and grams
 //The program then performs the desired conversion. Have the
 //user respond by typing the integer 1 for one type of conversion and 2
 //for the other. The program reads the user’s answer and then executes an
